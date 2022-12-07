@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300&family=Francois+One&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Staatliches&family=Tourney:wght@600&display=swap');
+* {
+    box-sizing: border-box;
+}
+.body {
+    background: #C9C9C9;
+}
+main {
+    width: 1440px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 13px;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.select-lang {
+    margin-right: 50px;
+}
+.select-lang {
+    border: none;
+    border: none;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+    font-family: 'Tourney', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.breadcrumbs {
+    display: flex;
+    margin: 0 -5px;
+}
+.breadcrumbs__item {
+    list-style-type: none;
+    /* padding: 0 5px; */
+    text-decoration: none;
+    font-family: 'Staatliches';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    text-transform: uppercase;
+    padding: 0 5px;
+}
+.breadcrumbs__item:after {
+    content: "/";
+}
+.breadcrumbs__item:last-child:after {
+    content: " ";
+}
+.breadcrumbs__item a {
+    color: #000000;
+    text-decoration: none;
+    margin-right: 10px;
+}
+section {
+    padding: 90px 0;
+}
+h2 {
+    font-family: 'Francois One', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+h2 sup {
+    vertical-align: top;
+    font-family: 'Farro', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    text-transform: none;
+}
+p {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    margin-bottom: 40px;
+}
+a {
+    color: #000000;
+}
+i {
+    font-style: italic;
+}
+summary {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 48px;
+}
+details {
+    margin-bottom: 40px;
+}
+summary::marker {
+    content: "+  ";
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 48px;
+}
+mark {
+    background-color: lightgray;
+}
+
