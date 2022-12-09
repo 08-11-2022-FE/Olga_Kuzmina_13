@@ -2,33 +2,50 @@
 * {
     box-sizing: border-box;
 }
-.body {
+body {
     background: #C9C9C9;
 }
 main {
+    background-color: #fff;
+}
+.big-container {
     width: 1440px;
     margin: 0 auto;
-    background-color: #fff;
-    padding-top: 13px;
 }
 .container {
     width: 1200px;
     margin: 0 auto;
 }
+.grid-area {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main-content";
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    padding: 120px 0 90px 0;
+}
+.flex-container {
+    display: flex;
+}
+.flex-container__space-beetween {
+    justify-content: space-between;
+}
+.flex-container__align-items-center {
+    align-items: center;
+}
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left:50%;
+    transform:translateX(-50%);
+    z-index: 400;
+    background-color: #fff;
+    padding: 13px 0;
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.select-lang {
+header nav .select-lang {
     margin-right: 50px;
-}
-.select-lang {
     border: none;
     border: none;
     -moz-appearance: none; /* Firefox */
@@ -42,11 +59,11 @@ nav {
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
-.breadcrumbs {
+header .breadcrumbs {
     display: flex;
     margin: 0 -5px;
 }
-.breadcrumbs__item {
+header .breadcrumbs__item {
     list-style-type: none;
     /* padding: 0 5px; */
     text-decoration: none;
@@ -59,30 +76,72 @@ nav {
     text-transform: uppercase;
     padding: 0 5px;
 }
-.breadcrumbs__item:after {
+header .breadcrumbs__item:after {
     content: "/";
 }
-.breadcrumbs__item:last-child:after {
+header .breadcrumbs__item:last-child:after {
     content: " ";
 }
-.breadcrumbs__item a {
+header .breadcrumbs__item a {
     color: #000000;
     text-decoration: none;
     margin-right: 10px;
 }
-section {
-    padding: 90px 0;
+header .breadcrumbs__item a:hover {
+    color: gray;
 }
-h2 {
+.sidebar {
+    grid-area: sidebar;
+}
+.sidebar ul {
+    width: 100%;
+    position: sticky;
+    top: 150px;
+}
+.sidebar li {
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 80px;
+}
+.sidebar a {
+    text-decoration: none;
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+}
+.sidebar a:hover {
+    color: lightgrey;
+}
+.main-content {
+    height: 68%;
+    grid-area: main-content;
+    position: relative;
+}
+.main-content h2 {
     font-family: 'Francois One', sans-serif;
     font-weight: 400;
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    padding-top: 28px;
     margin-bottom: 40px;
+    position: relative;
 }
-h2 sup {
+.main-content h2:before {
+    content: " ";
+    width: 100px;
+    height: 8px;
+    background: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.main-content h2 sup {
     vertical-align: top;
     font-family: 'Farro', sans-serif;
     font-weight: 300;
@@ -91,36 +150,41 @@ h2 sup {
     letter-spacing: 0.04em;
     text-transform: none;
 }
-p {
+.main-content p {
     font-family: 'PT Sans', sans-serif;
     font-weight: 400;
     font-size: 28px;
     line-height: 48px;
     margin-bottom: 40px;
 }
-a {
+.main-content a {
     color: #000000;
 }
-i {
+.main-content i {
     font-style: italic;
 }
-summary {
+.main-content summary {
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
     font-size: 28px;
     line-height: 48px;
 }
-details {
+.main-content details {
     margin-bottom: 40px;
 }
-summary::marker {
+.main-content summary::marker {
     content: "+  ";
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
     font-size: 28px;
     line-height: 48px;
 }
-mark {
+.main-content mark {
     background-color: lightgray;
 }
-
+.main-content__bg-img {
+    position: fixed;
+    top: 150px;
+    display: flex;
+    justify-content: right;
+}

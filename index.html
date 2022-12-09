@@ -9,30 +9,40 @@
         <link rel="stylesheet" href="./src/styles/style.css">
     </head>
     <body>
-        <main>
-            <div class="container">
-                <header>
-                    <nav>
-                        <!-- <div class="select-lang">
-                            <p>eng</p>
-                        </div> -->
-                        <select class="select-lang" name="lang" id="lang">
-                            <option value="eng">eng</option>
-                            <option value="ua">ua</option>
-                        </select>
-                        <ul class="breadcrumbs">
-                            <li class="breadcrumbs__item"><a href="#">Documentation</a></li>
-                            <li class="breadcrumbs__item">Who's using</li>
-                        </ul>
-                    </nav>
-                    <div class="logo">
-                        <a href="#">
-                            <img src="./src/images/company-logo-black.svg" alt="logo">
-                        </a>
+        <main class="big-container">
+            <div class="main-content__bg-img big-container">
+                <img src="./src/images/bg-picture.svg" alt="bg-img">
+            </div>
+            <div class="grid-area container">
+                <header class="big-container">
+                    <div class="container flex-container flex-container__space-beetween flex-container__align-items-center">
+                        <nav class="flex-container flex-container__space-beetween flex-container__align-items-center">
+                            <select class="select-lang" name="lang" id="lang">
+                                <option value="eng">eng</option>
+                                <option value="ua">ua</option>
+                            </select>
+                            <ul class="breadcrumbs">
+                                <li class="breadcrumbs__item"><a href="#">Documentation</a></li>
+                                <li class="breadcrumbs__item">Who's using</li>
+                            </ul>
+                        </nav>
+                        <div class="logo">
+                            <a href="#">
+                                <img src="./src/images/company-logo-black.svg" alt="logo">
+                            </a>
+                        </div>
                     </div>
                 </header>
-                <section>
-                    <h2>Introduction <sup>Chapter 1</sup></h2>
+                <section class="sidebar">
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#core-components">core components</a></li>
+                        <li><a href="#react-fundamentals">react fundamentals</a></li>
+                        <li><a href="#handling-text-input">handling text input</a></li>
+                    </ul>
+                </section>
+                <section class="main-content">
+                    <h2 id="introduction">Introduction <sup>Chapter 1</sup></h2>
                     <p>
                         Welcome to the very start of your React Native journey!
                         If you're looking for environment setup instructions,
@@ -40,7 +50,7 @@
                         for an introduction to the documentation, Native Components,
                         React, and more!
                     </p>
-                    <h2>core components <sup>Chapter 2</sup></h2>
+                    <h2 id="core-components">core components <sup>Chapter 2</sup></h2>
                     <p>
                         React Native is an open source framework for
                         building Android and iOS applications using
@@ -52,19 +62,7 @@
                         React in the next section. But first, let’s cover how
                         components work in React Native.
                     </p>
-                    <h2>core components <sup>Chapter 2</sup></h2>
-                    <p>
-                        React Native is an open source framework for
-                        building Android and iOS applications using
-                        React and the app platform’s native capabiles.
-                        With React Native, you use JavaScript to access
-                        your platform’s APIs as well as to describe the
-                        appearance and behavior of your UI using React components:
-                        <i>bundles of reusable, nestable code</i>. You can learn more about
-                        React in the next section. But first, let’s cover how
-                        components work in React Native.
-                    </p>
-                    <h2>react fundamentals <sup>Chapter 3</sup></h2>
+                    <h2 id="react-fundamentals">react fundamentals <sup>Chapter 3</sup></h2>
                     <p>
                         React Native runs on <a href="#" target="_blank" rel="noopener noreferrer">React</a>, a popular open source
                         library for building user interfaces with JavaScript.
@@ -112,7 +110,7 @@
                             State gives your components memory!
                         </p>
                     </details>
-                    <h2>handling text input <sup>Chapter 4</sup></h2>
+                    <h2 id="handling-text-input">handling text input <sup>Chapter 4</sup></h2>
                     <p>
                         TextInput is a Core Component that allows the user to enter text.
                         It has an <i>onChangeText</i> prop that takes a function to be called
