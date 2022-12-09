@@ -7,6 +7,16 @@ body {
 }
 main {
     background-color: #fff;
+    padding: 120px 0 90px 0;
+}
+h1, h2 {
+    font-family: 'Francois One', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
 }
 .big-container {
     width: 1440px;
@@ -23,7 +33,6 @@ main {
         "sidebar main-content";
     grid-template-columns: 1fr 2fr;
     gap: 30px;
-    padding: 120px 0 90px 0;
 }
 .flex-container {
     display: flex;
@@ -122,14 +131,7 @@ header .breadcrumbs__item a:hover {
     position: relative;
 }
 .main-content h2 {
-    font-family: 'Francois One', sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
     padding-top: 28px;
-    margin-bottom: 40px;
     position: relative;
 }
 .main-content h2:before {
@@ -187,4 +189,61 @@ header .breadcrumbs__item a:hover {
     top: 150px;
     display: flex;
     justify-content: right;
+}
+.companies h2 {
+   padding-left: 110px;
+   position: relative;
+}
+.companies h2:before {
+    content: " ";
+    width: 100px;
+    height: 8px;
+    background: #000000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+.companies__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+.companies__card {
+    width: 22.5%;
+    height: 180px;
+    margin: 15px;
+    background-color: transparent;
+    perspective: 1000px;
+}
+.companies__card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 8px;
+}
+.companies__card:hover .companies__card-inner {
+    transform: rotateY(180deg);
+  }
+.companies__card-front, .companies__card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.companies__card-front {
+    background: #E6E6E6;
+}
+.companies__card-back {
+    background: #000000;
+    transform: rotateY(180deg);
 }
